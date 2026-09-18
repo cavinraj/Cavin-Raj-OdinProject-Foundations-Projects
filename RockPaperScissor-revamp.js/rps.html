@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="rps.js" defer></script>
+</head>
+<body style="background-image: url(rpsbackground.jpeg);background-repeat: no-repeat;height: 100vh;width: 100%;background-size: cover;overflow: hidden;background-position: center bottom;background-size: contain;background-color: #4a4a4a;">
+    <div id="score" style="width: 10%;position: absolute;top:20px;left:20px;display: flex;justify-content: right;border: 2px solid black; border-radius: 15px;padding: 3px;background-color: #c9a12a;">
+        <label for="comp_score_text" id="comp_score_text" style="width:auto ;height:auto;font-size: xx-large;">Computer Score : 0</label>
+    </div>
+    <div id="score" style="width: 10%;position: absolute;top:20px;right:20px;display: flex;justify-content: left;border: 2px solid black; border-radius: 15px;padding: 3px;background-color: #c9a12a;">
+        <label for="your_score_text" id="your_score_text" style="width:auto ;height:auto;font-size: xx-large;">Your Score : 0</label>
+    </div>
+    <br> <br>
+    <div id="pictures" style="display: flex;justify-content: center;">
+        <img src="rock.png" alt="rock" style="width: 15%;height: fit-content;">
+        <img src="paper.png" alt="paper" style="width:15% ;height: fit-content;">
+        <img src="scissor.png" alt="scissor" style="width:15% ;height: fit-content;">
+    </div>
+    <br> <br>
+    <div id="buttons" style="display: flex;justify-content: center;">
+        <button id="rock" style="width:15% ;height: 50px;font-size: large;background-color: #c9a12a;font-family:monospace;" >Rock</button>
+        <button id="paper" style="width:15% ;height: 50px;font-size: large;background-color: #c9a12a;font-family:monospace;">Paper</button>
+        <button id="scissor" style="width:15% ;height: 50px;font-size: large;background-color: #c9a12a;font-family:monospace;">Scissor</button>
+    </div>
+</body>
+</html>
