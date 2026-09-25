@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Base styles for the notification box */
+        .toast {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #333;
+        color: #fff;
+        padding: 16px 24px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-family: sans-serif;
+        z-index: 1000;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        /* Structural styling */
+        .toast-content strong {
+        display: block;
+        margin-bottom: 4px;
+        }
+
+        .toast-content p {
+        margin: 0;
+        font-size: 14px;
+        color: #ccc;
+        }
+
+        /* Close button style */
+        .close-toast {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+        padding: 0;
+        }
+
+        /* Utility class to hide the notification */
+        .toast.hidden {
+        opacity: 0;
+        transform: translateY(20px);
+        pointer-events: none; /* Prevents clicking when hidden */
+        }
+    </style>
+</head>
+<body>
+    <button id="notifyBtn">Trigger Notification</button>
+
+<!-- Notification Box -->
+    <div id="notificationBox" class="toast hidden">
+        <div class="toast-content">
+            <strong>Notification Title</strong>
+            <p>This is your custom popup message!</p>
+        </div>
+        <button id="closeNotification" class="close-toast">&times;</button>
+    </div>
+
+    <script defer>
+        const notifyBtn = document.getElementById('notifyBtn');
+        const notificationBox = document.getElementById('notificationBox');
+        const closeNotification = document.getElementById('closeNotification');
+
+        // Show notification
+        notifyBtn.addEventListener('click', () => {
+            notificationBox.classList.remove('hidden');
+        });
+
+        // Hide notification manually
+        closeNotification.addEventListener('click', () => {
+            notificationBox.classList.add('hidden');
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch a Sketch</title>
+    <script src="etch-a-sketch.js" defer></script>
+
+    <style>
+        #reset_button {
+            width: 10%; 
+            height: 4%; 
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: center;
+            border: 2px solid black; 
+            border-radius: 15px;
+            padding: 3px;
+            background-color: #c9a12a;
+            font-size: large;
+            cursor: pointer;
+            transition: background-color 0.5s ease;
+        }
+
+        /* 2. Hover effect easily overrides the base style now */
+        #reset_button:hover {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <button id="reset_button">Reset</button>
+    <div id="container" style="width: 600px; height: 600px; border: 2px solid black; display: flex; flex-wrap: wrap;"></div>
+</body>
+</html>
